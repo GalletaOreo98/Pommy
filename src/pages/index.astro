@@ -1,40 +1,37 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Features from "../components/Features.astro";
 const pageTitle = "Or3odev";
 ---
+
 <Layout pageTitle={pageTitle}>
     <div class="gif">
-        <img width="256" alt="pommy" src="/pommy-logo.svg"/>
+        <img width="256" alt="pommy" src="/pommy-logo.svg" />
     </div>
     <h1>Pommy</h1>
     <p class="primary-txt">
-        ¡Maximiza tu eficiencia y alcanza metas de manera organizada y satisfactoria!
+        ¡Maximiza tu eficiencia y alcanza metas de manera organizada y
+        satisfactoria!
     </p>
     <div class="center">
-        <a href="/projects/">
-            <button class="btn">Prueba</button>
+        <a href="/about-us/">
+            <button class="btn">Probar gratis</button>
         </a>
     </div>
-    <h2>Intereses</h2>
-    <p>
-        Siempre me ha llamado la atención la programación y la tecnología en general. 
-        Además, disfruto de la pintura digital, el pixel art y modelado 3D. 
-        Actualmente, trabajo a tiempo parcial en impresiones 3D con filamento y resina. 
-        Tengo experiencia en la configuración de máquinas de impresión 3D, así como en la laminación, 
-        diseño y postprocesado de modelos 3D. <br>
-        Me gusta usar Krita para pintura digital, pixel art y edición de imágenes; y Camtasia para la edición de videos.
-    </p>
-    <p>
-        Me interesan las finanzas y la contabilidad, áreas en las que tengo conocimientos 
-        gracias a una carrera técnica en contaduría y finanzas que cursé en secundaria. 
-        También estoy interesado en aprender inglés y practicarlo; actualmente, tengo un nivel intermedio.
-    </p>
+    <Features/ >  
 </Layout>
 
 <style>
     h1 {
         font-size: 3.1rem;
-        color: rgb(158, 89, 223);
+        color: #9e59df;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        h1 {
+            text-align: center;
+        }
     }
 </style>
+
 

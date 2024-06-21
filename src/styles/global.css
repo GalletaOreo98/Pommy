@@ -2,11 +2,11 @@
 :root {
     --background: #1e1e2e; 
     --background-light: #ffffff;
-    --button: #78c2ad;
+    --button: #9e59df;
     --text: #ffffff;
     --text-light: #1e1e2e; 
     --text-link: #78c2ad;
-    --underline: #375a7f;
+    --underline: #9e59df;
     --header: cursive;
     --body: sans-serif;
 }
@@ -204,13 +204,14 @@ small, li {
 /* Button */
 .btn {
     text-align: center;
-    background: rgb(58, 136, 97);
+    background: #9e59df;
     border: 2px solid var(--button);
     border-radius: 8px;
     color: var(--text);
-    font: 600 16px var(--body);
+    font: 600 22px var(--body);
     padding: 8px 16px;
     transition: background-color 0.4s, color 0.4s;
+    margin-top: 1rem;
 }
 
 .btn:hover {
@@ -328,14 +329,6 @@ html.light {
 
 .light .card__txt {
     color: var(--text-light); 
-}
-
-.light .btn {
-    color: var(--text-light);
-}
-
-.light .btn:hover {
-    color: var(--text);
 }
 
 .light .icon__link {

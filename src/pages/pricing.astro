@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+const pageTitle = "Precios";
+---
+<Layout pageTitle={pageTitle}>
+    
+    <section class="pricing-section">
+      <div class="pricing-header">
+        <h2>Planes de Suscripción</h2>
+        <p>Elige el plan que mejor se adapte a tus necesidades</p>
+      </div>
+      <div class="pricing-plans">
+        <div class="pricing-plan">
+          <h3>Mensual</h3>
+          <p class="price">$1.99</p>
+          <p class="billed">Facturado mensualmente</p>
+          <button>Suscríbete Ahora</button>
+        </div>
+        <div class="pricing-plan">
+          <h3>Anual</h3>
+          <p class="price">$0.99</p>
+          <p class="billed">Facturado anualmente</p>
+          <p>Ahorra $12 al año</p>
+          <button>Suscríbete Ahora</button>
+        </div>
+      </div>
+    </section>
+    
+</Layout>
+
+<style>
+    .pricing-section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+  
+    .pricing-header {
+      margin-bottom: 2rem;
+    }
+  
+    .pricing-header h2 {
+      font-size: 2rem;
+    }
+  
+    .pricing-header p {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+  
+    .pricing-plans {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+  
+    .pricing-plan {
+      background: #374b81;
+      border-radius: 8px;
+      padding: 2rem;
+      flex: 1 1 300px;
+      max-width: 300px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .pricing-plan h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .pricing-plan p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .pricing-plan .price {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  
+    .pricing-plan .billed {
+      font-size: 0.875rem;
+      color: #84ffc6;
+    }
+  
+    .pricing-plan button {
+      background-color: #9e59df;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 4px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .pricing-plan button:hover {
+      background-color: #d164db;
+    }
+  </style>
+

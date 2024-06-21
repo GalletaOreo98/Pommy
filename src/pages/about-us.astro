@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+const allProjects = await getCollection("projects");
+const pageTitle = "Nosotros";
+---
+
+<Layout pageTitle={pageTitle}>
+    <section>
+        <h2>Nosotros</h2>
+        <br />
+        <h3>Misión</h3>
+        <p>
+            Ayudamos a los usuarios a maximizar su eficiencia y alcanzar sus
+            metas de una manera organizada y satisfactoria, utilizando
+            herramientas de toma de notas, listas de tareas, estadísticas, la
+            esencia de técnicas como Pomodoro; usando gamificación para una
+            experiencia enriquecedora que no solo mejore la productividad, sino
+            que también haga el proceso agradable y motivador.
+        </p>
+        <br />
+        <h3>Visión</h3>
+        <p>
+            Ser la plataforma con una gran comunidad de usuarios, reconocida por
+            su innovación y efectividad en ayudar a las personas a maximizar su
+            eficiencia y alcanzar sus metas de manera organizada y
+            satisfactoria. Aspiramos a crear una experiencia de usuario
+            enriquecedora que combine simplicidad, funcionalidad y motivación,
+            promoviendo el crecimiento personal y profesional de nuestros
+            usuarios.
+        </p>
+    </section>
+
+    <ul role="list" class="link-card-grid">
+        {
+            allProjects.map((card) => (
+                <Card
+                    url={`/projects/${card.slug}/`}
+                    image={card.data.image.url}
+                    title={card.data.title}
+                    body={card.data.description}
+                />
+            ))
+        }
+    </ul>
+</Layout>
