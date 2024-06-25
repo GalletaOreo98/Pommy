@@ -1,40 +1,9 @@
 ---
 
 ---
-<h2 style="margin-top: 2rem;">Características</h2>
-<p>
-    Pommy es una aplicación que te ayudará con la gestión del tiempo y productividad personal
-    a través de toma de notas, definición de metas y objetivos para llevar un control del tiempo dedicado
-    a estos.
-</p>
 <section class="features">
     <div class="features-list">
-        <div class="feature-item">
-            <h3>Toma de notas</h3>
-            <p>
-                Captura y organiza tus ideas con nuestra sencilla herramienta
-                de notas.
-            </p>
-        </div>
-        <div class="feature-item">
-            <h3>Listas de tareas</h3>
-            <p>Crea y gestiona tu lista de tareas para mantener un orden.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Estadísticas</h3>
-            <p>Analiza tu progreso con nuestras detalladas estadísticas.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Pomodoro</h3>
-            <p>Optimiza tu tiempo y mantén el foco con la técnica Pomodoro.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Gamificación</h3>
-            <p>
-                Haz tu rutina diaria más divertida y motivadora con elementos desbloqueables, 
-                insignias y progreso ¡como si se tratara de un juego!
-            </p>
-        </div>
+        <slot />
     </div>
 </section>
 
@@ -49,38 +18,5 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .feature-item {
-        background: #a96fe027;
-        border-radius: 8px;
-        padding: 1.5rem;
-        margin: 1rem;
-        flex: 1 1 calc(33% - 2rem);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        max-width: 300px;
-    }
-
-    .feature-item h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .feature-item p {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    @media (max-width: 768px) {
-        .feature-item {
-            flex: 1 1 calc(50% - 2rem);
-        }
-    }
-
-    @media (max-width: 480px) {
-        .feature-item {
-            flex: 1 1 100%;
-        }
     }
 </style>

@@ -1,0 +1,48 @@
+---
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div class="feature-item">
+    <h3>{title}</h3>
+    <p>{description}</p>
+</div>
+
+<style>
+    .feature-item {
+        background: #a96fe027;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1rem;
+        flex: 1 1 calc(33% - 2rem);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 300px;
+    }
+
+    .feature-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-item p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .feature-item {
+            flex: 1 1 calc(50% - 2rem);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .feature-item {
+            flex: 1 1 100%;
+        }
+    }
+</style>

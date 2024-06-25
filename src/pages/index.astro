@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Features from "../components/Features.astro";
+import FeatureItem from "../components/FeatureItem.astro";
 const pageTitle = "Pommy";
 ---
 
@@ -18,7 +19,34 @@ const pageTitle = "Pommy";
             <button class="btn">Probar gratis</button>
         </a>
     </div>
-    <Features/ >  
+    <h2 style="margin-top: 2rem;">Características</h2>
+    <p>
+        Pommy es una aplicación que te ayudará con la gestión del tiempo y
+        productividad personal a través de toma de notas, definición de metas y
+        objetivos para llevar un control del tiempo dedicado a estos.
+    </p>
+    <Features>
+        <FeatureItem
+            title={"Toma de notas"}
+            description={"Captura y organiza tus ideas con nuestra sencilla herramienta de notas."}
+        />
+        <FeatureItem
+            title={"Listas de tareas"}
+            description={"Crea y gestiona tu lista de tareas para mantener un orden."}
+        />
+        <FeatureItem
+            title={"Estadísticas"}
+            description={"Analiza tu progreso con nuestras detalladas estadísticas."}
+        />
+        <FeatureItem
+            title={"Pomodoro"}
+            description={"Optimiza tu tiempo y mantén el foco con la técnica Pomodoro."}
+        />
+        <FeatureItem
+            title={"Gamificación"}
+            description={"Haz tu rutina diaria más divertida y motivadora con elementos desbloqueables, insignias y progreso ¡como si se tratara de un juego!"}
+        />
+    </Features>
 </Layout>
 
 <style>
@@ -26,12 +54,10 @@ const pageTitle = "Pommy";
         font-size: 3.1rem;
         color: #9e59df;
     }
-    
+
     @media only screen and (max-width: 600px) {
         h1 {
             text-align: center;
         }
     }
 </style>
-
-
