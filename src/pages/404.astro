@@ -1,12 +1,15 @@
 ---
-const description = "404";
+const pageTitle = "404";
+import Layout from "../layouts/Layout.astro";
+
 import '../styles/global.css';
 ---
+<Layout pageTitle={pageTitle}>
 <section class="lost">
     <div class="gif">
-        <img width="256" alt="error" class="pulsing-effect" src="/pommy-logo.svg"/>
+        <img width="256" alt="error" class="pulsing-effect" src="/pommy-logo2.svg"/>
     </div>
-    <h1 class="lost__header">{ description }</h1>
+    <h1 class="lost__header">{ pageTitle }</h1>
     <p class="lost__body">
         Esta ruta no existe
     </p>
@@ -14,4 +17,6 @@ import '../styles/global.css';
         <a class="lost__link" href="/">Return Home</a>
     </p>
 </section>
+</Layout>
+
 

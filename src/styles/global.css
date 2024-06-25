@@ -288,7 +288,7 @@ footer {
 
 /* 404 */
 .lost {
-    margin-top: 30%;
+    margin-top: 10%;
     text-align: center;
 }
 
@@ -296,7 +296,7 @@ footer {
     margin: 0 auto;
     text-align: center;
     border: 0;
-    font-size: 7.5rem;
+    font-size: 6.5rem;
     letter-spacing: 10px;
 }
 
