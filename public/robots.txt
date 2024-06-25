@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pommy.exo-machinepills.com/sitemap-index.xml
