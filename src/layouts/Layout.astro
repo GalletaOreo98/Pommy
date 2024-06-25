@@ -5,6 +5,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
+const description = "¡Maximiza tu eficiencia y alcanza metas de manera organizada y satisfactoria! Pommy es una aplicación que te ayudará con la gestión del tiempo y productividad personal a través de toma de notas, definición de metas y objetivos para llevar un control del tiempo dedicado a estos.";
+const imgMetaTagUrl = "https://raw.githubusercontent.com/GalletaOreo98/Pommy/main/util-assets/og-meta-pommy-img.jpg";
 ---
 <!DOCTYPE html>
 <html transition:animate="none" lang="en">
@@ -15,6 +17,16 @@ const { pageTitle } = Astro.props;
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
+        <meta name="description" content={description}>
+        <meta name="keywords" content="pommy, pomodoro, gestion del tiempo, gestion personal, gamificacion, mejora personal, se eficiente, eficiencia, procrastinacion, mejorar">
+        <meta name="author" content="or3odev">
+        <meta property="og:title" content={pageTitle}>
+        <meta property="og:description" content={description}>
+        <meta property="og:image" content={imgMetaTagUrl}>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content={pageTitle}>
+        <meta name="twitter:description" content={description}>
+        <meta name="twitter:image" content={imgMetaTagUrl}>
         <ViewTransitions />
 	</head>
 	<body>
